@@ -77,7 +77,7 @@ jobs:
         if: |
           contains(fromJson(inputs.coverage-versions), inputs.python-version)
           && contains(fromJson('["push", "pull_request"]'), github.event_name)
-        uses: codecov/codecov-action@v3.1.1
+        uses: codecov/codecov-action@v3.1.4
         with:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
